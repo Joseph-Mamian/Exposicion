@@ -34,6 +34,7 @@ Queue<String> lista = new LinkedList<>();
         agregarCola = new javax.swing.JButton();
         eliminarCola = new javax.swing.JButton();
         consultar = new javax.swing.JButton();
+        consultarPrimero = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,23 +62,35 @@ Queue<String> lista = new LinkedList<>();
             }
         });
 
+        consultarPrimero.setText("Consultar primer elemento");
+        consultarPrimero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultarPrimeroActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(eliminarCola)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(agregarCola)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                        .addComponent(consultar)))
-                .addGap(66, 66, 66))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(83, 83, 83)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(consultarPrimero)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(eliminarCola)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(agregarCola)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                                .addComponent(consultar)))
+                        .addGap(66, 66, 66))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,7 +103,9 @@ Queue<String> lista = new LinkedList<>();
                     .addComponent(consultar))
                 .addGap(18, 18, 18)
                 .addComponent(eliminarCola)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(consultarPrimero)
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         pack();
@@ -102,7 +117,7 @@ Queue<String> lista = new LinkedList<>();
     }//GEN-LAST:event_agregarColaActionPerformed
 
     private void eliminarColaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarColaActionPerformed
-      JOptionPane.showMessageDialog(null, "Eliminado");
+      JOptionPane.showMessageDialog(null, "Eliminado" );
         lista.poll();
     }//GEN-LAST:event_eliminarColaActionPerformed
 
@@ -110,6 +125,10 @@ Queue<String> lista = new LinkedList<>();
 
         JOptionPane.showMessageDialog(null, "Los elementos de la lista son: " + lista );
     }//GEN-LAST:event_consultarActionPerformed
+
+    private void consultarPrimeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarPrimeroActionPerformed
+        JOptionPane.showMessageDialog(null, "El primer elemento es: " + lista.peek());
+    }//GEN-LAST:event_consultarPrimeroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,6 +169,7 @@ Queue<String> lista = new LinkedList<>();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton agregarCola;
     private javax.swing.JButton consultar;
+    private javax.swing.JButton consultarPrimero;
     private javax.swing.JButton eliminarCola;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
