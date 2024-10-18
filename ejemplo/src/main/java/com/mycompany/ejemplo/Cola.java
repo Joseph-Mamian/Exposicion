@@ -75,16 +75,16 @@ Queue<String> lista = new LinkedList<>();
                         .addComponent(consultar)))
                 .addGap(66, 66, 66))
             .addGroup(layout.createSequentialGroup()
-                .addGap(103, 103, 103)
+                .addGap(83, 83, 83)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel1)
-                .addGap(41, 41, 41)
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(agregarCola)
                     .addComponent(consultar))
@@ -102,7 +102,8 @@ Queue<String> lista = new LinkedList<>();
     }//GEN-LAST:event_agregarColaActionPerformed
 
     private void eliminarColaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarColaActionPerformed
-      lista.poll();
+      JOptionPane.showMessageDialog(null, "Eliminado");
+        lista.poll();
     }//GEN-LAST:event_eliminarColaActionPerformed
 
     private void consultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarActionPerformed
